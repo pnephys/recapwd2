@@ -1,3 +1,7 @@
+<?php 
+    header("HTTP/1.0 404 Not Found");
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,6 +10,6 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Le produit demandé n'existe pas</h1>
+    <h1>404 not found</h1>
 </body>
 </html>
