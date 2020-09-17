@@ -24,8 +24,16 @@ if(isset($_GET['id'])){
     <title>Produit: <?= $don['nom'] ?></title>
 </head>
 <body>
+    <?php 
+        if(empty($don['image'])){
+            echo "pas d'image";
+        }else{
+            echo "<img src='image/".$don['image']."'>";
+        }
+    ?>
+
     <h1><?= $don['nom'] ?></h1>
-    <h2>Prix: <?= $don['prix']  ?>€</h2>
-    <div><?= nl2br($don['description'])  ?></div>
+    <h2>Prix: <?= $don['prix'] ?>€</h2>
+    <div><?= nl2br($don['description']) ?></div>  
 </body>
 </html>
