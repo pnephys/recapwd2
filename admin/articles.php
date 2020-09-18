@@ -20,6 +20,7 @@
 </head>
 <body>
     <h1>Administration des produits</h1>
+    <a href="addProduct.php">Ajouter un produit</a>
     <table border="1">
         <tr>
             <th>id</th>
@@ -27,7 +28,7 @@
             <th>prix</th>
             <th>action</th>
         </tr>
-    </table>
+    
     <?php
         require "../connexion.php";
          $req = $bdd->query("SELECT * FROM articles");
@@ -37,12 +38,13 @@
                 echo "<td>".$don['nom']."</td>";
                 echo "<td>".$don['prix']."</td>";
                 echo "<td>";
-                    echo "<a href=''>Modifier</a>";
+                    echo "<a href=''>Modifier </a>";
                     echo "<a href=''>Supprimer</a>";
                 echo "</td>";
             echo "</tr>";
          }
          $req->closeCursor();
     ?>
+    </table>
 </body>
 </html>
